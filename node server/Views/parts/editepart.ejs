@@ -1,0 +1,21 @@
+
+     <form action="/parts/edit/<%= parts.p_id%>" method="post" enctype="multipart/form-data">
+                  
+                            <input type="text" name="category" value="<%= parts.category%>"    />
+                     
+           
+                            <input type="text" name="model" value="<%= parts.model%>" class="form-control"   />
+                            <input type="text" name="price" value="<%= parts.price%>" class="form-control"   />
+                            <input type="text" name="brand" value="<%= parts.brand%>" class="form-control"   />
+                            <input type="text" name="code" value="<%= parts.code%>" class="form-control"   />
+                            <input type="text" name="manufactor" value="<%= parts.manufactor%>" class="form-control"   />
+                            <input type="text" name="color" value="<%= parts.color%>" class="form-control"   />
+                            <input type="text" name="quantity" value="<%= parts.quantity%>" class="form-control"   />
+                            <input type="file" name="image" value="<%= parts.image%>" class="form-control"   />
+                         
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                
+
+                  
+    </form>
+   

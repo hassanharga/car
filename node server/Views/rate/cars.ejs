@@ -1,0 +1,27 @@
+<%include ../partials/admin/header%>
+
+        <h3> Cars List </h3>
+    <table class="table table-white">
+            <thead>
+              <tr>
+                <th scope="col">user id</th>
+                <th scope="col">car id</th>
+                <th scope="col">car rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% cars.forEach((car)=>{%>
+                <tr>
+                  <td><%=car.u_id%></td>
+                  <td><%=car.c_id%></td>
+                  <td><%=car.rate%></td>
+                  <td>
+                    <a class="btn btn-primary" href="/ratecars/edit/<%=car.cr_id%>">Edit</a>
+                    <a class="btn btn-danger" href="/ratecars/delete/<%=car.cr_id%>">Delete</a>
+                  </td>
+                </tr>
+              <%})%>
+            </tbody>
+          </table>
+  
+          <%include ../partials/admin/footer%>

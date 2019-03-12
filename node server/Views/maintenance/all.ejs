@@ -1,0 +1,40 @@
+
+<table>
+    <thead >
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">UserName</th>
+            <th scope="col">Password</th>
+            <th scope="col">Image</th>
+            <th scope="col">email</th>
+            <th scope="col">phone</th>
+            <th scope="col">Option</th>
+        </tr>
+    </thead>   
+        <tbody>
+                <% speakers.forEach((speaker)=>{%>
+                    <tr>
+                            <td><%=speaker.m_id%></td>
+                            <td><%=speaker.name%></td>
+                            <td><%=speaker.username%></td>
+                            <td><%=speaker.password%></td>           
+                            <td><img src="/images/<%=speaker.image%>" style="width:100px;height:100px"/></td>
+                            <td><%=speaker.email%></td>
+                            <td><%=speaker.phone%></td>
+                            
+                            <td>
+                              
+                              <a class="btn btn-primary" href="/automaintenance/edit/<%=speaker.m_id%>">Edit</a>
+                              <a class="btn btn-danger" href="/automaintenance/delete/<%=speaker.m_id%>">Delete</a>
+                            </td>
+                          </tr>
+                        <%})%>
+        </tbody>
+        <tfoot class="table-dark text-center" >
+            <tr>
+                <th colspan="7">User Details of Fields</th>
+            </tr>
+        </tfoot>
+    </table>
+

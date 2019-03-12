@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <form action="/vendors/edit/<%=vendor.v_id%>" method="POST" enctype="multipart/form-data"><br>
+           name: <input type="text" name="name" value="<%=vendor.name%>"/><br>
+            username<input type="text" name="username" value="<%=vendor.user_name%>"/><br>
+            password<input type="password" name="password" value="<%=vendor.password%>"/><br>
+            email<input type="text" name="email" value="<%=vendor.email%>"/><br>
+            phone<input type="text" name="phone" value="<%=vendor.phone%>"/><br>
+            city<input type="text" name="city" value="<%=vendor.address.city%>"/><br>
+            street<input type="text" name="street" value="<%=vendor.address.street%>"/><br>
+            building<input type="text" name="building"value="<%=vendor.address.building%>"/><br>
+            <img src="/images/<%=vendor.logo%>" style="width:200px;height:200px"/>
+            
+           logo <input type="file" name="logo"/><br>
+           <input type="submit" value="update"/><br>
+
+            
+        </form>
+    </body>
+</html>

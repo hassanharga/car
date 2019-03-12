@@ -1,0 +1,49 @@
+<%include ../partials/admin/header%>
+
+<body>
+  <div class="modal-dialog" >
+		<div class="modal-content">
+			
+			<hr />
+			<div class="modal-body">
+				<form action="/rateparts/edit/<%=part.pr_id%>" method="POST" >
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-user"></span>
+							</span>
+							<input type="text" name="u_id" value="<%=part.u_id%>"  class="form-control" placeholder="carID" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-lock"></span>
+							</span>
+							<input type="text" name="p_id" value="<%=part.p_id%>" class="form-control" placeholder="partID"  />
+
+						</div>
+
+                    </div>
+                    <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-lock"></span>
+								</span>
+                                <input type="text" name="rate" value="<%=part.rate%>"  class="form-control" />
+    
+                            </div>
+    
+                        </div>
+
+					<div class="form-group text-center">
+						<button type="submit" class="btn btn-success btn-lg" >update</button>
+						
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	<%include ../partials/admin/footer%>
+

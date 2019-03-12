@@ -1,0 +1,27 @@
+<%include ../partials/admin/header%>
+
+        <h3> Parts List </h3>
+    <table class="table table-white">
+            <thead>
+              <tr>
+                <th scope="col">user id</th>
+                <th scope="col">part id</th>
+                <th scope="col">part rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% parts.forEach((part)=>{%>
+                <tr>
+                  <td><%=part.u_id%></td>
+                  <td><%=part.p_id%></td>
+                  <td><%=part.rate%></td>
+                  <td>
+                    <a class="btn btn-primary" href="/rateparts/edit/<%=part.pr_id%>">Edit</a>
+                    <a class="btn btn-danger" href="/rateparts/delete/<%=part.pr_id%>">Delete</a>
+                  </td>
+                </tr>
+              <%})%>
+            </tbody>
+          </table>
+  
+          <%include ../partials/admin/footer%>

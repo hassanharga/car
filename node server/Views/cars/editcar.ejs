@@ -1,0 +1,48 @@
+<form action="/cars/edit/<%= cars.c_id%>" method="post" enctype="multipart/form-data">
+     <legend> Add Cars</legend>
+
+     <div class="form-group">
+
+          <label for="">model</label>
+          <input type="text" name="model" value="<%=cars.model%>" class="form-control" id=""><br>
+
+          <label for="">brand</label>
+          <input type="text" name="brand" value="<%=cars.brand%>" class="form-control" id=""><br>
+
+
+          <label for="">body</label>
+
+          <input type="text" name="body" value="<%=cars.body%>" class="form-control" id=""><br>
+
+          <label for="">fuel</label>
+          <input type="fuel" name="code" value="<%=cars.fuel%>" class="form-control" id=""><br>
+
+          <label for="">engin</label>
+          <input type="text" name="engin" value="<%=cars.engin%>" class="form-control"><br>
+
+          <label for="">transmission</label>
+          <input type="text" name="transmission" value="<%=cars.transmission%>" class="form-control" id=""><br>
+
+          <label for="">color</label>
+          <input type="text" name="color" value="<%=cars.color%>" class="form-control" id=""> <br>
+
+          <label for="">door</label>
+          <input type="number" name="door" value="<%=cars.door%>" class="form-control" id=""> <br>
+
+          <label for="">warranty</label>
+          <input type="number" name="warranty" value="<%=cars.warranty%>" class="form-control" id=""> <br>
+
+<label for="">country </label>
+<input type="text" name="country" value="<%=cars.country%>" class="form-control" id=""> <br>
+          <label for="">price</label>
+          <input type="number" name="price" value="<%=cars.price%>" class="form-control" id=""><br>
+          <label for="">image</label>
+          <input type="file" name="image" value="<%=cars.image%>" class="form-control" id=""> <br>
+     </div>
+
+
+
+     <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>

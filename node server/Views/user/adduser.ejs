@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Title</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <form class="form" action="/users/register" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for=""></label>
+      <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="Name">
+
+    </div>
+
+    <div class="form-group">
+      <label for=""></label>
+      <input type="text" class="form-control" name="email" id="" aria-describedby="helpId" placeholder="Email">
+
+    </div>
+    <div class="form-group">
+      <label for=""></label>
+      <input type="text" class="form-control" name="phone" id="" aria-describedby="helpId" placeholder="phone">
+    </div>
+
+    <label class="custom-control custom-radio">
+      <input type="radio" name="gender" id="" value="male" class="custom-control-input">
+      <span class="custom-control-indicator">Male</span>
+      <input type="radio" name="gender" id="" value="female" class="custom-control-input">
+      <span class="custom-control-indicator">Female</span>
+    </label>
+
+    <div class="form-group">
+      <label for=""></label>
+      <input type="password" class="form-control" name="password" id="" aria-describedby="helpId" placeholder="password">
+
+    </div>
+    <div class="form-group">
+      <label for=""></label>
+      <input type="text" class="form-control" name="address" id="" aria-describedby="helpId" placeholder="Address">
+    </div>
+    <div class="form-group">
+      <label for=""></label>
+      <input type="text" class="form-control" name="user_name" id="" aria-describedby="helpId" placeholder="User Name">
+    </div>
+    <input type="file" name="speakerImage" id="">
+    <div class="form-group">
+      <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+    </div>
+  </form>
+</body>
+
+</html>
