@@ -1,0 +1,90 @@
+<form [formGroup]="registerForm" (ngSubmit)="addPart()" method="POST" enctype="multipart/form-data">
+  <div class="form-group" >
+    <label>Category</label>
+    <input type="text" formControlName="category" [(ngModel)]="part.category"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.category.errors }" />
+    <div *ngIf="submitted && f.category.errors" class="invalid-feedback">
+      <div *ngIf="f.category.errors.required">category is required</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Model</label>
+    <input type="text" formControlName="model" [(ngModel)]="part.model" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.model.errors }" />
+    <div *ngIf="submitted && f.model.errors" class="invalid-feedback">
+      <div *ngIf="f.model.errors.required">model is required</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>price</label>
+    <input type="number" formControlName="price" [(ngModel)]="part.price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+    <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+      <div *ngIf="f.price.errors.required">price is required</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>brand</label>
+    <input type="text" formControlName="brand" [(ngModel)]="part.brand" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.brand.errors }" />
+    <div *ngIf="submitted && f.brand.errors" class="invalid-feedback">
+      <div *ngIf="f.brand.errors.required">brand is required</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>code</label>
+    <input type="text" formControlName="code" [(ngModel)]="part.code" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.code.errors }" />
+    <div *ngIf="submitted && f.code.errors" class="invalid-feedback">
+      <div *ngIf="f.code.errors.required">code is required</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>manufactor</label>
+    <input type="text" formControlName="manufactor" [(ngModel)]="part.manufactor" class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f.manufactor.errors }" />
+    <div *ngIf="submitted && f.manufactor.errors" class="invalid-feedback">
+      <div *ngIf="f.manufactor.errors.required">manufactor is required</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>color</label>
+    <input type="text" formControlName="color" [(ngModel)]="part.color" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.color.errors }" />
+    <div *ngIf="submitted && f.color.errors" class="invalid-feedback">
+      <div *ngIf="f.color.errors.required">code is required</div>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-3">
+        <label for="myField" class="control-label">availability:</label>
+
+        <label class="radio-inline">
+            <input type="radio"  formControlName="availability" value="available" [(ngModel)]="part.availability"
+            [ngClass]="{ 'is-invalid': submitted && f.availability.errors }" checked="checked" />  Available
+        </label>
+
+        <label class="radio-inline">
+            <input type="radio" formControlName="availability" value="unavailable" [(ngModel)]="part.availability"
+            [ngClass]="{ 'is-invalid': submitted && f.availability.errors }" /> un Available
+        </label>
+    </div>
+</div>
+
+  <div class="form-group">
+    <label>quantity</label>
+    <input type="number" formControlName="quantity" [(ngModel)]="part.quantity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }" />
+    <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+      <div *ngIf="f.quantity.errors.required">code is required</div>
+      <div *ngIf="f.quantity.errors.maxlength">quantity must be at Most 2 characters</div>
+
+    </div>
+  </div>
+
+
+
+  <div class="form-group">
+    <button type="submit" [disabled]="loading" class="btn btn-primary">ADD</button>
+  </div>
+</form>

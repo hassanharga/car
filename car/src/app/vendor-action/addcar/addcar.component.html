@@ -1,0 +1,181 @@
+<form class="form-horizontal" #rf="ngForm" method="POST" enctype="multipart/form-data">
+
+  <div class="form-group row" [class.has-error]="brand.invalid">
+    <label for="" class="col-sm-2 control-label">Brand</label>
+    <div class="col-sm-7">
+
+      <select name="brand" #brand="ngModel" (change)="onBrandChange(brand.value)"
+       required class="form-control"
+        [(ngModel)]="car.brand">
+        <option value="Ford">Ford</option>
+        <option value="Huyndai">Huyndai</option>
+        <option value="Nissan">Nissan</option>
+        <option value="Chevrolet">Chevrolet</option>
+        <option value="Kia">Kia</option>
+        <option value="BMW">BMW</option>
+      </select>
+      <!-- <input type="text" name="brand" #brand="ngModel" required class="form-control"
+        [(ngModel)]="car.brand" placeholder="brand" aria-describedby="helpId"> -->
+    </div>
+  </div>
+<div class="form-group row" [class.has-error]="model.invalid">
+  <label for="" class="col-sm-2 control-label">Model</label>
+<div class="col-sm-7">
+
+<select name="model" #model="ngModel" required class="form-control"
+[(ngModel)]="car.model" id="inlineFormCustomSelect">
+  <option *ngFor="let item of modelArray" (value)="item">{{item}}</option>
+
+</select>
+
+  <div class="col-sm-2 alert alert-danger" *ngIf="model.invalid && model.touched">
+    <span *ngIf="model.errors?.required">Required</span>
+  </div>
+</div>
+
+      <!-- <input type="text" name="model" #model="ngModel" required class="form-control"
+            [(ngModel)]="car.model" placeholder="model" aria-describedby="helpId"> -->
+    </div>
+
+    <div class="col-sm-2 alert alert-danger" *ngIf="brand.invalid && brand.touched">
+      <span>Required</span>
+    </div>
+
+  <div class="form-group row" [class.has-error]="body.invalid">
+    <label for="" class="col-sm-2 control-label">Body</label>
+    <div class="col-sm-7">
+      <select name="Body" name="body" #body="ngModel" required class="form-control" [(ngModel)]="car.body">
+        <option value="Sedan">Sedan</option>
+        <option value="SUV">SUV</option>
+        <option value="Truck">Truck</option>
+        <option value="Coupe">Coupe</option>
+        <option value="Minivan">Minivan</option>
+        <option value="Compact">Compact</option>
+      </select>
+      <!-- <input type="text" name="body" #body="ngModel" required class="form-control"
+        [(ngModel)]="car.body" placeholder="body" aria-describedby="helpId"> -->
+    </div>
+    <div class="col-sm-2 alert alert-danger" *ngIf="body.invalid && body.touched">
+      <span>Required</span>
+    </div>
+  </div>
+  <div class="form-group row" [class.has-error]="fuel.invalid">
+    <label for="" class="col-sm-2 control-label">Fuel</label>
+    <div class="col-sm-7">
+      <input type="text" name="fuel" #fuel="ngModel" required class="form-control" [(ngModel)]="car.fuel" placeholder="fuel"
+        aria-describedby="helpId">
+    </div>
+    <div class="col-sm-2 alert alert-danger" *ngIf="fuel.invalid && fuel.touched">
+      <span>Required</span>
+    </div>
+  </div>
+  <div class="form-group row" [class.has-error]="engin.invalid">
+    <label for="" class="col-sm-2 control-label">engin</label>
+    <div class="col-sm-7">
+      <input type="text" name="engin" #engin="ngModel" required class="form-control" [(ngModel)]="car.engin"
+        placeholder="engin" aria-describedby="helpId">
+    </div>
+    <div class="col-sm-2 alert alert-danger" *ngIf="engin.invalid && engin.touched">
+      <span>Required</span>
+    </div>
+  </div>
+  <div class="form-group row" [class.has-error]="transmission.invalid">
+    <label for="" class="col-sm-2 control-label">transmission</label>
+    <div class="col-sm-7">
+      <select name="transmission" name="transmission" #transmission="ngModel" required class="form-control" [(ngModel)]="car.transmission">
+        <option value="Automatic">Automatic</option>
+        <option value="Manual">Manual</option>
+        <option value="Semi-automatic">Semi-automatic</option>
+      </select>
+    </div>
+    <!-- <div class="col-sm-7">
+      <input type="text" name="transmission" #transmission="ngModel" required class="form-control"
+        [(ngModel)]="car.transmission" placeholder="transmission" aria-describedby="helpId">
+    </div> -->
+    <div class="col-sm-2 alert alert-danger" *ngIf="transmission.invalid && transmission.touched">
+      <span>Required</span>
+    </div>
+  </div>
+  <div class="form-group row" [class.has-error]="color.invalid">
+    <label for="" class="col-sm-2 control-label">color</label>
+    <div class="col-sm-7">
+<select
+name="color" #color="ngModel" required class="form-control" [(ngModel)]="car.color"
+placeholder="color" aria-describedby="helpId">
+  <option value="Red">Red</option>
+  <option value="Grean">Grean</option>
+  <option value="Blue">Blur</option>
+  <option value="Black">Black</option>
+<option value="White">White</option>
+  <option value="Cyan">Cyan</option>
+<option value="pink">Pink</option>
+
+</select>
+
+      <!-- <input type="color" name="color" #color="ngModel" required class="form-control" [(ngModel)]="car.color"
+        placeholder="color" aria-describedby="helpId"> -->
+    </div>
+    <div class="col-sm-2 alert alert-danger" *ngIf="color.invalid && color.touched">
+      <span>Required</span>
+    </div>
+  </div>
+  <div class="form-group row" [class.has-error]="door.invalid">
+    <label for="" class="col-sm-2 control-label">door</label>
+    <div class="col-sm-7">
+      <input type="number" name="door" #door="ngModel" required class="form-control" [(ngModel)]="car.door" placeholder="door"
+        aria-describedby="helpId">
+    </div>
+    <div class="col-sm-2 alert alert-danger" *ngIf="door.invalid && door.touched">
+      <span>Required</span>
+    </div>
+  </div>
+  <div class="form-group row" [class.has-error]="warranty.invalid">
+    <label for="" class="col-sm-2 control-label">warranty</label>
+    <div class="col-sm-7">
+      <input type="number" name="warranty" #warranty="ngModel" required class="form-control" [(ngModel)]="car.warranty"
+        placeholder="warranty" aria-describedby="helpId">
+    </div>
+    <div class="col-sm-2 alert alert-danger" *ngIf="warranty.invalid && warranty.touched">
+      <span>Required</span>
+    </div>
+  </div>
+
+  <div class="form-group row" [class.has-error]="country.invalid">
+    <label for="" class="col-sm-2 control-label">country</label>
+    <div class="col-sm-7">
+<select
+name="country" #country="ngModel" required class="form-control" [(ngModel)]="car.country"
+placeholder="country" aria-describedby="helpId">
+  <option value="Korya">Koria</option>
+  <option value="Japan">Japan</option>
+  <option value="Germany">Germany</option>
+<option value="Italy">Italy</option>
+  <option value="USA">USA</option>
+</select>
+      <!-- <input type="text" name="country" #country="ngModel" required class="form-control" [(ngModel)]="car.country"
+        placeholder="country" aria-describedby="helpId"> -->
+    </div>
+    <div class="col-sm-2 alert alert-danger" *ngIf="country.invalid && country.touched">
+      <span>Required</span>
+    </div>
+  </div>
+  <div class="form-group row" [class.has-error]="price.invalid">
+    <label for="" class="col-sm-2 control-label">price</label>
+    <div class="col-sm-7">
+      <input type="number" name="price" #price="ngModel" required class="form-control" [(ngModel)]="car.price"
+        placeholder="price" aria-describedby="helpId">
+    </div>
+    <div class="col-sm-2 alert alert-danger" *ngIf="price.invalid && price.touched">
+      <span>Required</span>
+    </div>
+  </div>
+  <!-- <input type="file" name="image" class="form-control col-sm-3" id="" (change)="fileChange($event)" /> -->
+  <br>
+  <div class="image-preview  col-sm-3" *ngIf="imagePreview !==''&& imagePreview ">
+    <img [src]="imagePreview" [alt]="form.value.title" style="height:100px;width: 100px;" />
+  </div>
+  <div class="row offset-5">
+    <button type="button" class="btn btn-success btn-lg center" (click)="addCar()" [disabled]="rf.invalid">Add
+      Car</button>
+  </div>
+</form>

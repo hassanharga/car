@@ -1,0 +1,45 @@
+<table class="table table-hover table-responsive">
+  <tbody>
+
+   <tr><td>
+     <label>U_id</label>
+     <input type="text" name="u_id" class="form-control text-center" id=""
+     [(ngModel)]="user.u_id" disabled>
+    </td></tr>
+
+    <tr><td>
+        <label>Name</label>
+      <input type="text" name="name" class="form-control text-center" id=""
+      [(ngModel)]="user.name"></td></tr>
+
+   <tr><td>
+      <label>email</label>
+     <input type="text" name="email" class="form-control text-center" id=""
+     [(ngModel)]="user.email"></td></tr>
+
+   <tr><td>
+      <label>City</label>
+     <input type="text" name="city" class="form-control text-center" id=""
+     [(ngModel)]="user.address.city"></td></tr>
+     <tr><td>
+      <label>Street</label>
+     <input type="text" name="street" class="form-control text-center" id=""
+     [(ngModel)]="user.address.street"></td></tr>
+     <tr><td>
+      <label>Building</label>
+     <input type="text" name="building" class="form-control text-center" id=""
+     [(ngModel)]="user.address.building"></td></tr>
+
+   <tr><td>
+      <label>Username</label>
+     <input type="text" name="user_name" class="form-control text-center" id=""
+     [(ngModel)]="user.user_name"></td></tr>
+
+   <tr><td>
+      <label>password</label>
+     <input type="text" name="password" class="form-control text-center"
+     [(ngModel)]="user.password"disabled></td></tr>
+   <tr><td><button type="button" class="btn btn-primary text-center">Update</button></td></tr>
+
+</tbody>
+</table>

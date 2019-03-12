@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from templatecs.com/demo/template/car/index_1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Feb 2019 19:17:44 GMT -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home 1</title>
+	<link rel="icon" href="favicon.ico">
+
+</head>
+
+<body class="bg-3">
+	<div id="wrap" class="color1-inher">
+		<!-- Header-->
+		<header id="wrap-header" class="color-inher">
+			<div class="top-header">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6 col-md-6 col-lg-6 hidden-xs">
+							<p class="f-14"><i class="fa fa-map-marker m-r-lg-5"></i><strong>AUTOSHOP</strong> - 123 HOLDING, BUSAN, KOREA</p>
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-6">
+							<ul class="pull-right">
+              <li><a class="nav-link" *ngIf="!_auth.loginedIN()" routerLink="/login" routerLinkActive="active">Login</a></li>
+              <li><a class="nav-link" *ngIf="!_auth.loginedIN()" routerLink="/register" routerLinkActive="active">Register</a></li>
+              <li><a class="nav-link" style="cursor:pointer" *ngIf="_auth.loginedIN()" (click)="_auth.logout()">Logout</a></li>
+								<li class="cart-icon">
+									<ul class="cart-dropdown">
+										<li class="bg-white bg1-gray-15 color-inher">
+											<!-- Product item -->
+											<div class="product-item">
+												<div class="row m-lg-0">
+													<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-lg-0">
+														<a href="#" class="product-img"><img src="../../assets/images/1.png" alt="image"></a>
+													</div>
+													<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 p-lg-0">
+														<div class="product-caption text-left">
+															<h4 class="product-name p-lg-0">
+																<a href="#">360 FORGED® - MESH 8</a>
+															</h4>
+															<p>1 x <strong>$126.00</strong></p>
+														</div>
+													</div>
+													<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 p-lg-0">
+														<i class="fa fa-remove remove-cart-item"></i>
+													</div>
+												</div>
+											</div>
+											<!-- Product item -->
+											<div class="product-item">
+												<div class="row m-lg-0">
+													<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-lg-0">
+														<a href="#" class="product-img"><img src="../../assets/images/2.png" alt="image"></a>
+													</div>
+													<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 p-lg-0">
+														<div class="product-caption text-left">
+															<h4 class="product-name p-lg-0">
+																<a href="#">360 FORGED® - MESH 8</a>
+															</h4>
+															<p>1 x <strong>$126.00</strong></p>
+														</div>
+													</div>
+													<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 p-lg-0">
+														<i class="fa fa-remove remove-cart-item"></i>
+													</div>
+												</div>
+											</div>
+											<div class="p-t-lg-15 p-b-lg-10">Total : <strong class="pull-right price">$202.00</strong></div>
+											<div class="clearfix"></div>
+											<a href="#" class="ht-btn">Check out</a>
+											<a href="#" class="ht-btn pull-right">View Cart</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Menu -->
+			<div class="menu-bg">
+				<div class="container">
+					<div class="row">
+						<!-- Logo -->
+						<div class="col-md-3 col-lg-3">
+							<a href="#" class="logo"><img src="../../assets/images/logo.png" alt="logo"></a>
+						</div>
+						<div class="col-md-9 col-lg-9">
+							<div class="hotline">
+                <a [routerLink]="['/addcar']">addCar</a>
+                <span>  / </span>
+                <a [routerLink]="['/listcar']">listCar</a>
+                <span> / </span>
+                <a [routerLink]="['/addpart']">addpart</a>
+                <span> / </span>
+                <a [routerLink]="['/listpart']">list part</a>
+							</div>
+							<div class="clearfix"></div>
+							<!-- Menu -->
+							<div class="main-menu">
+								<div class="container1">
+									<nav class="navbar navbar-default menu">
+										<div class="container1-fluid">
+											<div class="navbar-header">
+												<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+												 aria-expanded="false">
+													<span class="sr-only">Toggle navigation</span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
+											</div>
+											<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+												<ul class="nav navbar-nav">
+													<li><a [routerLink]="['/home']">Home</a></li>
+													<li> <a [routerLink]="['/cars']">Cars</a></li>
+													<li> <a [routerLink]="['/parts']">Parts</a></li>
+													<li><a [routerLink]="['/contactus']">Contact us</a></li>
+												</ul>
+											</div>
+										</div>
+									</nav>
+									<!-- Search -->
+									<div class="search-box">
+										<i class="fa fa-search"></i>
+										<form>
+											<input type="text" name="search-txt" placeholder="Search..." class="search-txt form-item">
+											<button type="submit" name="submit" class="search-btn btn-1"><i class="fa fa-search"></i></button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+    <!-- Main content -->
+    <div id="wrap-body" class="p-t-lg-30">
+      <div class="container">
+        <div class="wrap-body-inner">
+          <!-- Breadcrumb-->
+          <div class="hidden-xs">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="ht-breadcrumb pull-left">
+                  <li class="home-act"><a href="#"><i class="fa fa-home"></i></a></li>
+                  <li class="home-act"><a href="#">My Account</a></li>
+                  <li class="active">Register</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Register -->
+          <section class="block-login m-t-lg-30 m-t-xs-0 m-b-lg-50">
+            <div class="">
+              <div class="row">
+                <div class="col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3">
+                  <div class="heading">
+                    <h3>Create an Account</h3>
+                  </div>
+                  <div class="p-lg-30 p-xs-15 bg-gray-f5 bg1-gray-15">
+                    <p class="m-b-lg-15">Compete all fill below to create an account!</p>
+
+
+                    <form class="form-horizontal" #rf="ngForm" method="POST" enctype="multipart/form-data">
+                      <div class="form-group row" [class.has-error]="model.invalid">
+                        <label for="" class="col-2 control-label">Model</label>
+                        <div class="col-4">
+                          <input type="text" name="model" #model="ngModel" required class="form-control"
+                            [(ngModel)]="car.model" placeholder="model" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="model.invalid && model.touched">
+                          <span *ngIf="model.errors?.required">Required</span>
+                        </div>
+                      </div>
+                      <div class="form-group row" [class.has-error]="brand.invalid">
+                        <label for="" class="col-2 control-label">Brand</label>
+                        <div class="col-4">
+                          <input type="text" name="brand" #brand="ngModel" required class="form-control"
+                            [(ngModel)]="car.brand" placeholder="brand" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="brand.invalid && brand.touched">
+                          <span>Required</span>
+                        </div>
+                      </div>
+                      <div class="form-group row" [class.has-error]="body.invalid">
+                        <label for="" class="col-2 control-label">Body</label>
+                        <div class="col-4">
+                          <input type="text" name="body" #body="ngModel" required class="form-control"
+                            [(ngModel)]="car.body" placeholder="body" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="body.invalid && body.touched">
+                          <span>Required</span>
+                        </div>
+                      </div>
+                      <div class="form-group row" [class.has-error]="fuel.invalid">
+                        <label for="" class="col-2 control-label">Fuel</label>
+                        <div class="col-4">
+                          <input type="text" name="fuel" #fuel="ngModel" required class="form-control"
+                            [(ngModel)]="car.fuel" placeholder="fuel" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="fuel.invalid && fuel.touched">
+                          <span>Required</span>
+                        </div>
+                      </div>
+                      <div class="form-group row" [class.has-error]="engin.invalid">
+                        <label for="" class="col-2 control-label">engin</label>
+                        <div class="col-4">
+                          <input type="text" name="engin" #engin="ngModel" required class="form-control"
+                            [(ngModel)]="car.engin" placeholder="engin" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="engin.invalid && engin.touched">
+                          <span>Required</span>
+                        </div>
+                      </div>
+                      <div class="form-group row" [class.has-error]="transmission.invalid">
+                        <label for="" class="col-2 control-label">transmission</label>
+                        <div class="col-4">
+                          <input type="text" name="transmission" #transmission="ngModel" required class="form-control"
+                            [(ngModel)]="car.transmission" placeholder="transmission" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="transmission.invalid && transmission.touched">
+                          <span>Required</span>
+                        </div>
+                      </div>
+                      <div class="form-group row" [class.has-error]="color.invalid">
+                        <label for="" class="col-2 control-label">color</label>
+                        <div class="col-4">
+                          <input type="text" name="color" #color="ngModel" required class="form-control"
+                            [(ngModel)]="car.color" placeholder="color" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="color.invalid && color.touched">
+                          <span>Required</span>
+                        </div>
+                      </div>
+                      <div class="form-group row" [class.has-error]="door.invalid">
+                        <label for="" class="col-2 control-label">door</label>
+                        <div class="col-4">
+                          <input type="text" name="door" #door="ngModel" required class="form-control"
+                            [(ngModel)]="car.door" placeholder="door" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="door.invalid && door.touched">
+                          <span>Required</span>
+                        </div>
+                      </div>
+                      <div class="form-group row" [class.has-error]="warranty.invalid">
+                        <label for="" class="col-2 control-label">warranty</label>
+                        <div class="col-4">
+                          <input type="text" name="warranty" #warranty="ngModel" required class="form-control"
+                            [(ngModel)]="car.warranty" placeholder="warranty" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="warranty.invalid && warranty.touched">
+                          <span>Required</span>
+                        </div>
+                      </div>
+                      <div class="form-group row" [class.has-error]="v_id.invalid">
+                        <label for="" class="col-2 control-label">v_id</label>
+                        <div class="col-4">
+                          <input type="text" name="v_id" #v_id="ngModel" required class="form-control"
+                            [(ngModel)]="car.v_id" placeholder="v_id" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="v_id.invalid && v_id.touched">
+                          <span>Required</span>
+                        </div>
+                      </div>
+                      <div class="form-group row" [class.has-error]="country.invalid">
+                        <label for="" class="col-2 control-label">country</label>
+                        <div class="col-4">
+                          <input type="text" name="country" #country="ngModel" required class="form-control"
+                            [(ngModel)]="car.country" placeholder="country" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="country.invalid && country.touched">
+                          <span>Required</span>
+                        </div>
+                      </div>
+                      <div class="form-group row" [class.has-error]="price.invalid">
+                        <label for="" class="col-2 control-label">price</label>
+                        <div class="col-4">
+                          <input type="text" name="price" #price="ngModel" required class="form-control"
+                            [(ngModel)]="car.price" placeholder="price" aria-describedby="helpId">
+                        </div>
+                        <div class="col-2 alert alert-danger" *ngIf="price.invalid && price.touched">
+                          <span>Required</span>
+                        </div>
+                      </div>
+                      <input type="file" name="image" class="form-control col-3" id="" (change)="fileChange($event)" />
+                      <br>
+                      <div class="image-preview  col-3" *ngIf="imagePreview !==''&& imagePreview ">
+                        <img [src]="imagePreview" [alt]="form.value.title" style="height:100px;width: 100px;" />
+                      </div>
+                      <div class="row offset-5">
+                        <button type="button" class="btn btn-success btn-lg center" (click)="addCar()"
+                          [disabled]="rf.invalid">Add Car</button>
+                      </div>
+                    </form>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- Footer-->
+    <footer id="wrap-footer" class="bg-gray-1 color-inher">
+      <div class="block-fv">
+        <div class="container">
+          <div class="procs bg-gray-1">
+            <div class="row">
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="th-bar-item">
+                  <i class="fa fa-truck"></i>Free shipping in USA
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="th-bar-item">
+                  <i class="fa fa-money"></i>SAFE & SECURE PAYMENTS
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="th-bar-item">
+                  <i class="fa fa-retweet"></i>30 day easy return
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer top -->
+      <div class="footer-top">
+        <div class="container">
+          <div class="bg-gray-1 p-l-r">
+            <div class="row">
+              <!-- Company info -->
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="heading-1">
+                  <h3>Company Info</h3>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp incidunt ut .</p>
+                <ul class="list-default">
+                  <li><i class="fa fa-signal"></i>123 Holding, Busan, Korea</li>
+                  <li><i class="fa fa-phone"></i>0123-456-789</li>
+                  <li><i class="fa fa-envelope-o"></i>Support@htmlcs.com</li>
+                  <li><i class="fa fa-globe"></i>http://www.ndktheme.com</li>
+                </ul>
+              </div>
+              <!-- Newsletter -->
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="newsletter text-left">
+                  <div class="heading-1">
+                    <h3>Newsletter</h3>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp incidunt ut </p>
+                  <form>
+                    <div class="form-group">
+                      <input type="email" class="form-control form-item" id="Email1" placeholder="Email">
+                    </div>
+                    <button type="submit" class="ht-btn ht-btn-default">Subscribe</button>
+                  </form>
+                </div>
+              </div>
+              <!-- Quick link -->
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="heading-1">
+                  <h3>Quick Link</h3>
+                </div>
+                <ul class="list-default">
+                  <li><a href="#"><i class="fa fa-angle-right"></i>Privacy Policy</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i>Community</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i>Blog</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i>Guide use</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i>Our Servces</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer bottom -->
+      <div class="footer-bt color-inher">
+        <div class="container">
+          <div class="bg-gray-0c p-l-r">
+            <div class="row">
+              <div class="col-md-6">
+                <p>© 2016 Designed by <a href="https://themeforest.net/user/t3theme">t3theme</a>. All rights reserved
+                </p>
+              </div>
+              <div class="col-md-6">
+                <ul class="social-icon list-inline pull-right">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google"></i></a></li>
+                  <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+<!-- Mirrored from templatecs.com/demo/template/car/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Feb 2019 19:18:28 GMT -->
+
+</html>

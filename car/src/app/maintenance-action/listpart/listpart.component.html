@@ -1,0 +1,36 @@
+<table class="table table-hover">
+  <thead>
+
+    <tr>
+      <th>category</th>
+      <th>model</th>
+      <th>price</th>
+      <th>brand</th>
+      <th>code</th>
+      <th>manufactor</th>
+      <th>color</th>
+      <th>availability</th>
+      <th>quantity</th>
+      <!-- <th>m_id</th> -->
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of parts">
+      <td><input type="text" name="category" class="form-control" id="" [(ngModel)]="item.category"></td>
+      <td><input type="text" name="model" class="form-control" id="" [(ngModel)]="item.model"></td>
+      <td><input type="number" name="price" class="form-control" id="" [(ngModel)]="item.price"></td>
+      <td><input type="text" name="brand" class="form-control" id="" [(ngModel)]="item.brand"></td>
+      <td><input type="text" name="code" class="form-control" id="" [(ngModel)]="item.code"></td>
+      <td><input type="text" name="manufactor" class="form-control" [(ngModel)]="item.manufactor"></td>
+      <td><input type="text" name="color" class="form-control" id="" [(ngModel)]="item.color"> </td>
+      <td><input type="text" name="availability" class="form-control" id="" [(ngModel)]="item.availability"> </td>
+        <td><input type="text" name="quantity" class="form-control" id="" [(ngModel)]="item.quantity"> </td>
+        <!-- <td><input type="number" name="m_id" class="form-control" id="" [(ngModel)]="item.m_id" disabled></td> -->
+       <td> <button type="button" class="btn btn-danger" (click)="delPart(item.p_id)">Delete</button>
+       <button type="button" class="btn btn-primary" (click)="updatPart(item)">Update</button><td>
+    </tr>
+
+  </tbody>
+</table>

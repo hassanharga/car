@@ -1,0 +1,46 @@
+<table class="table table-hover table-responsive">
+  <thead>
+    <tr>
+      <!-- <th>ID</th> -->
+      <th>model</th>
+      <th>brand</th>
+      <th>body</th>
+      <th>fuel</th>
+      <th>engin</th>
+      <th>transmission</th>
+      <th>color</th>
+      <th>door</th>
+      <th>warranty</th>
+      <th>country</th>
+      <th>price</th>
+      <th>v_id</th>
+      <th>Action</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of cars">
+      <!-- <td><input type="text" name="c_id" class="form-control" id="" [(ngModel)]="item.c_id" disabled></td> -->
+      <td><input type="text" name="model" class="form-control text-center" id="" [(ngModel)]="item.model"></td>
+      <td><input type="text" name="brand" class="form-control  text-center" id="" [(ngModel)]="item.brand"></td>
+      <td><input type="text" name="body" class="form-control text-center" id="" [(ngModel)]="item.body"></td>
+      <td><input type="fuel" name="fuel" class="form-control text-center" id="" [(ngModel)]="item.fuel"></td>
+      <td><input type="text" name="engin" class="form-control text-center" [(ngModel)]="item.engin"></td>
+      <td><input type="text" name="transmission" class="form-control text-center" id="" [(ngModel)]="item.transmission"></td>
+      <td><input type="text" name="color" class="form-control text-center" id="" [(ngModel)]="item.color"> </td>
+      <td><input type="number" name="door" class="form-control text-center" id="" [(ngModel)]="item.door"> </td>
+        <td><input type="number" name="warranty" class="form-control text-center" id="" [(ngModel)]="item.warranty"></td>
+        <td><input type="text" name="country" class="form-control text-center" id="" [(ngModel)]="item.country"> </td>
+        <td><input type="number" name="price" class="form-control text-center" id="" [(ngModel)]="item.price"></td>
+        <td><input type="number" name="v_id" class="form-control text-center" id="" [(ngModel)]="item.v_id" disabled></td>
+       
+       <td> <button type="button" class="btn btn-danger text-center" (click)="delCar(item.c_id)">Delete</button>
+       
+       <button type="button" class="btn btn-primary text-center" (click)="udpateCar(item)">Update</button></td> 
+    </tr>
+  
+  </tbody>
+</table>
+
+<!-- <router-outlet></router-outlet> -->

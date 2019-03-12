@@ -1,0 +1,18 @@
+<button class="btn btn-danger" (click)="order()">Click</button>
+<table class="table table-hover table-responsive">
+  <thead>
+    <th>OrderNumber</th>
+    <th>CarModel</th>
+    <th>UserName</th>
+    <th>PhoneNumber</th>
+  </thead>
+  <tbody>
+
+      <tr><td>{{orderlist.orderNumber}}</td>
+      <td>{{orderlist.carModel}}</td>
+      <td>{{orderlist.userName}}</td>
+      <td>{{orderlist.pNumber}}</td></tr>
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>
